@@ -17,13 +17,14 @@ iii.	Develop a user-friendly Flask web application that allows users to easily u
 * Model - This folder contains all the python files used to create, train, and test the model along with creating figures based on the model metrics
 * Images - This folder is the image datset created for this project and as such it contains all the images captured with each subfolder using the convention 'genus_species'
 ### Files
-* App/environment.yml -
-* App/app.py -
-* App/index.html -
-* App/result.html -
+* App/environment.yml - contains a list of dependencies and their versions and is to be used to create the conda environment to run the Flask app
+* App/app.py - This is main Python file that contains the Flask app
+* App/index.html - Home page/entry point for a web application
+* App/result.html - Page that displays the output from the ML model for each image
+* App/best_model.pth - Stores the PyTorch model which is used for the Flask app
 * Model/data_utils.py -
 * Model/visualize.py -
-* Model/train_eval.py -
+* Model/train_eval.py - 
 * Model/main.py -
 
 # Installation
@@ -36,9 +37,15 @@ Then, activate the environment by running
 
 conda activate (env_name)
 
+## To Run the Files to Create the Model
+Change the directories used to save the checkpoints and obtain the images within the main.py file (lines 32 and 33)
+
 # Running the Web App
+
+The Flask app has only been tested on a HPC specifically the ARC HPC at the University of Calgary, however, it can run on a local machine with a GPU.
+
 ## On Unix Systems
-1. Run an interactive session on one of ARC's GPU nodes
+1. Open Terminal, ssh and Login to ARC, and Run an interactive session on one of ARC's GPU nodes
 	
 Here is the command for that:
 
