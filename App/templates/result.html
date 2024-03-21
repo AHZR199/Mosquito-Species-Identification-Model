@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Identification Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #FFFFFF;
+    color: #333;
+    text-align: center;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  h1 {
+    font-weight: 300;
+  }
+  .result {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  .result img {
+    height: 300px;
+    border-radius: 8px;
+  }
+  .result-info {
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+  }
+  .btn {
+    display: inline-block;
+    border: 2px solid #0071e3;
+    color: #0071e3;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .btn:hover {
+    background-color: #0071e3;
+    color: white;
+  }
+  footer {
+    font-size: 14px;
+    color: #666;
+    margin-top: 100px;
+  }
+  footer a {
+    color: #0071e3;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Identification Results</h1>
+  {% for filename, top_species in results %}
+  <div class="result">
+    <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image">
+    <div class="result-info">
+      <h2>{{ filename }}</h2>
+      {% for species, confidence in top_species %}
+      <p>{{ species }}: {{ confidence }}%</p>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+  <a href="/" class="btn">Try another image</a>
+</div>
+<footer>
+  Designed in Calgary, Alberta by <a href="https://www.linkedin.com/in/abdullah-zubair-32081524b" target="_blank">Abdullah Zubair</a> Under the Soghigian Lab for Undergraduate Thesis<br>
+  <img src="https://images.squarespace-cdn.com/content/v1/55412b5ce4b0340beb364601/1520342890985-216A2B68EOF313I5SAET/Toxorhynchites.jpg?format=2500w" alt="Toxorhynchites (Lynchiella) rutilus" style="max-width: 80%; margin-top: 20px;">
+  <p>Toxorhynchites (Lynchiella) rutilus - Credit: Dr. Lawrence Reeves - <a href="http://www.lawrencereeves.com" target="_blank">The Reeves Lab</a></p>
+</footer>
+</body>
+</html>
