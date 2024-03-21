@@ -22,10 +22,10 @@ iii.	Develop a user-friendly Flask web application that allows users to easily u
 * App/index.html - Home page/entry point for a web application
 * App/result.html - Page that displays the output from the ML model for each image
 * App/best_model.pth - Stores the PyTorch model which is used for the Flask app
-* Model/data_utils.py -
-* Model/visualize.py -
-* Model/train_eval.py - 
-* Model/main.py -
+* Model/data_utils.py - Contains all the data-related functions for the  model (More information present within the file)
+* Model/visualize.py - Contains functions for visualizing and saving various plots and metrics related to the  model (More information present within the file)
+* Model/train_eval.py - Contains the core functionality for training and evaluating the model (More information present within the file)
+* Model/main.py - This is the main file as it serves as the entry point for training and evaluating the mosquito identification model (More information present within the file)
 
 # Installation
 ## Conda Environment
