@@ -29,11 +29,11 @@ iii.	Develop a user-friendly Flask web application that allows users to easily u
 
 # Installation
 ## Conda Environment
-The environment.yml file contains a list of dependencies and their versions. First install Conda if you havent then to set up a virtual environment using conda use the command
+The environment.yml file contains a list of dependencies and their versions. First install Conda if you havent then to set up a virtual environment using conda use the command:
 
 conda env create -f environment.yml -n (env_name). 
 
-Then, activate the environment by running 
+Then activate the environment by running:
 
 conda activate (env_name)
 
