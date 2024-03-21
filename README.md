@@ -44,7 +44,8 @@ Change the directories used to save the checkpoints and obtain the images within
 
 The Flask app has only been tested on a HPC specifically the ARC HPC at the University of Calgary, however, it can run on a local machine with a GPU.
 
-## On Unix Systems
+## Running on a Cluster
+### For Unix-based Systems
 1. Open Terminal, ssh and Login to ARC, and Run an interactive session on one of ARC's GPU nodes
 	
 Here is the command for that:
@@ -73,7 +74,12 @@ Here is an example of that command:
 
 ssh john.doe@arc.ucalgary.ca -L 8888:fg1:8888
 
-5. Now go back to the first terminal/command prompt window with the app running and cope the IP address and paste it into your browser
+5. Now go back to the first terminal/command prompt window with the app running and copy the IP address and paste it into your browser
 	
 The IP address that starts with 127 is the one that should work and then pasting that address into Chrome or Safari should
 let you then access and use the app!
+
+## Running Locally
+1. Activate conda environment made earlier
+2. Navigate to the app directory and run the app
+3. Copy the IP address provided by the app and paste it into your browser
