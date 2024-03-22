@@ -19,8 +19,9 @@ iii.	Develop a user-friendly Flask web application that allows users to easily u
 ### Files
 * App/environment.yml - contains a list of dependencies and their versions and is to be used to create the conda environment to run the Flask app
 * App/app.py - This is main Python file that contains the Flask app
-* App/index.html - Home page/entry point for a web application
-* App/result.html - Page that displays the output from the ML model for each image
+* App/best_model.pth - This is the Pytorch model that the Flask app will use
+* App/templates/index.html - Home page/entry point for a web application
+* App/templates/result.html - Page that displays the output from the ML model for each image
 * App/best_model.pth - Stores the PyTorch model which is used for the Flask app
 * Model/data_utils.py - Contains all the data-related functions for the  model (More information present within the file)
 * Model/visualize.py - Contains functions for visualizing and saving various plots and metrics related to the  model (More information present within the file)
